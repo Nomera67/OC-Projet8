@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.ttf') format('ttf');
+    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins-bold';
-    src: url('../fonts/Poppins-Bold.ttf') format('ttf');
+    src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Yellowtail';
-    src: url('../fonts/Yellowtail-Regular.ttf') format('ttf');
+    src: url('/assets/fonts/Yellowtail-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }

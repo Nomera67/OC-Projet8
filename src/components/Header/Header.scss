@@ -1,0 +1,31 @@
+.header{
+    margin: auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $regular-size;
+    height: 4rem;
+    &__logo{
+        font-family: 'Yellowtail', sans-serif;
+        font-size: $logo-size;
+    }
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        & > a {
+            color: $main-text-color;
+            transition: color .3s ease ;
+            &:hover{
+                color: $secondary-text-color
+            }
+        }
+    }
+}
+
+.active {
+    text-decoration: underline $secondary-text-color;
+    text-underline-offset: 5px;
+}

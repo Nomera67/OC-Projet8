@@ -7,4 +7,9 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   background-color: $main-background-color;
+  color: $main-text-color;
+}
+
+a {
+  text-decoration: none;
 }
