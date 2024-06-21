@@ -1,0 +1,29 @@
+.heroe{
+    height: 85vh;
+    width: 100%;
+    margin:  $header-size auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    &__presentation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    &__role{
+        font-size: $main-size;
+    }
+    &__welcome{
+        font-size: $secondary-size;
+    }
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: flex-end;
+        height: 190px;
+        font-size: $lower-size;
+    }
+}

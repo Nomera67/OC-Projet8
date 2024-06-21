@@ -1,0 +1,97 @@
+.projects{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 80vh;
+        gap: 70px;
+        padding: 10px 20px;
+    }
+    &__title{
+        font-family: 'Yellowtail', sans-serif;
+        font-size: $title-size;
+    }
+    &__filters{
+        &__container{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+        }
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__filter{
+        cursor: pointer;
+        background-color: transparent;
+        color: $secondary-text-color;
+        border: 1px solid $secondary-text-color;
+        padding: 5px 10px;
+        min-width: 75px;
+        border-radius: 20px;
+        font-size: $regular-size;
+        transition: all .5s ease;
+    }
+
+    &__cards{
+        width: 100%;
+        max-width: 1550px;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__container{
+            position: relative;
+            height: 275px;
+            min-width: 350px;
+            max-width: 500px;
+            overflow: hidden;
+            border-radius: 20px;
+            &:hover {
+                &> .projects__cards__content{
+                    transform: translateY(20%);
+                    &> .projects__cards__technologies{
+                        color: $secondary-text-color;
+                    }
+                }
+                
+                &> .projects__cards__images{
+                    filter: brightness(100%);
+                }
+            }
+        }
+
+        &__content{
+            position: absolute;
+            padding: 50px 10px;
+            bottom: 0;
+            left: 0;
+            color: $main-text-color;
+            width: 120%;
+            border-radius: 20px;
+            transform: translateY(45%);
+            transition: transform 0.5s ease;
+            text-shadow: 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1) ;
+        }
+        &__technologies{
+            transition: color 0.5s ease;
+        }
+
+        &__images{
+            display: block;
+            width: 100%;
+            transition: all 0.5s ease;
+            filter: brightness(50%);
+        }
+    }
+}
+
+.filter__active{
+    background-color: $secondary-text-color;
+    color: $main-text-color;
+}
