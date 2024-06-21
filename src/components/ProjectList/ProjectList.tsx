@@ -20,17 +20,17 @@ function ProjectList() {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-            const response = await fetch('/config/projects.json');
-            const data = await response.json();
-            setProjects(data);
+                const response = await fetch('/config/projects.json');
+                const data = await response.json();
+                setProjects(data);
 
-            const techSet = new Set<string>();
-            data.forEach((project: Project) => {
-                project.technologies.forEach(tech => techSet.add(tech));
-            });
-            setTechnologies(Array.from(techSet));
+                const techSet = new Set<string>();
+                data.forEach((project: Project) => {
+                    project.technologies.forEach(tech => techSet.add(tech));
+                });
+                setTechnologies(Array.from(techSet));
             } catch (error) {
-            console.error('Erreur lors du chargement des projets :', error);
+                console.error('Erreur lors du chargement des projets :', error);
             }
         };
 
@@ -45,36 +45,41 @@ function ProjectList() {
         }
     };
 
-    const filteredProjects = projects.filter(project =>
+    const filteredProjects = filter.length === 0 ? projects : projects.filter(project =>
         filter.every(f => project.technologies.includes(f))
     );
 
+    const noMatches = filter.length > 0 && filteredProjects.length === 0;
+
     return (
         <div className="projects__container">
-            <h2 className="projects__title">Mes projets :</h2>
-            <div className="projects__filters">
-                <button className="projects__filter" onClick={() => setFilter([])}>Reset Filters</button>
-                {technologies.map(tech => (
-                    <button
-                    key={tech}
-                    className={filter.includes(tech) ? 'active' : ''}
-                    onClick={() => handleFilterChange(tech)}
-                    >
-                    {tech}
-                    </button>
-                ))}
+            <h2 className="projects__title">Mes <span className="highlight">projets :</span></h2>
+            <div className="projects__filters__container">
+                <p className="projects__choice">Filtrez les projets :</p>
+                <div className="projects__filters">
+                    <button className="projects__filter" onClick={() => setFilter([])}>Reset</button>
+                    {technologies.map(tech => (
+                        <button
+                            key={tech}
+                            className={`projects__filter ${filter.includes(tech) ? 'filter__active' : ''}`}
+                            onClick={() => handleFilterChange(tech)}
+                        >
+                            {tech}
+                        </button>
+                    ))}
+                </div>
             </div>
+            
+            {noMatches && <p className='projects__cards__error'>Aucun projet ne correspond à votre recherche.</p>}
             <div className="projects__cards">
                 {filteredProjects.map((project, index) => (
-                    <div className="projects__cards__container" key={index}>
-                        <img src={project.image} alt={project.name} />
-                        <h3>{project.name}</h3>
-                        <p>{project.description}</p>
-                        <p>{project.technologies.join(", ")}</p>
-                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <Link to={`/projects/${project.slug}`}>Voir le projet</Link>
-                    </div>
+                    <Link to={`/projects/${project.slug}`} className="projects__cards__container" key={index}>
+                        <img src={project.image} alt={project.name} className='projects__cards__images'/>
+                        <div className="projects__cards__content">
+                            <h3 className='projects__cards__titles'>{project.name}</h3>
+                            <p className='projects__cards__technologies'>{project.technologies.join(", ")}</p>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>
