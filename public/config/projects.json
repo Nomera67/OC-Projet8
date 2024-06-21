@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Sophie Bluel",
+        "technologies": ["HTML5", "CSS3", "JavaScript"],
+        "image": "/assets/backgrounds-projects/sophie-bluel.webp",
+        "description": "Ce projet consiste à créer la partie dynamique du site d'une architecte d'intérieur, Sophie Bluel, et de permettre sa connexion pour ajouter et supprimer des projets de son portfolio.",
+        "githubLink": "https://github.com/Nomera67/OC-projet3",
+        "liveLink": "",
+        "slug": "sophie-bluel"
+    },
+    {
+        "name": "Visit Panama",
+        "technologies": ["Angular", "SCSS", "TypeScript"],
+        "image": "/assets/backgrounds-projects/visit-panama.webp",
+        "description": "Visit Panama permet d'avoir un aperçu d'une plateforme dédiée au tourisme au Panama avec plusieurs effets de parallaxe",
+        "githubLink": "https://github.com/Nomera67/visit-panama",
+        "liveLink": "",
+        "slug": "visit-panama"
+    },
+    {
+        "name": "Art Hover",
+        "technologies": ["Angular", "SCSS", "TypeScript", "API", "JavaScript"],
+        "image": "/assets/backgrounds-projects/arthover.webp",
+        "description": "Arthover est un site basé sur Angular, TypeScript et SCSS mettant en avant une collection de tableaux venant de la base de données du Metropolitan Museum of Art de New York",
+        "githubLink": "https://github.com/Nomera67/art-hover",
+        "liveLink": "",
+        "slug": "art-hover"
+    },
+    {
+        "name": "Synoptique tactile",
+        "technologies": ["React", "CSS", "TypeScript", "Node.js"],
+        "image": "/assets/backgrounds-projects/console.webp",
+        "description": "Logiciel de gestion de centrale de conférence Televic",
+        "githubLink": "",
+        "liveLink": "",
+        "slug": "synoptique-tactile"
+    },
+    {
+        "name": "Booki",
+        "technologies": ["HTML5", "CSS3", "Figma"],
+        "image": "/assets/backgrounds-projects/booki.webp",
+        "description": "Ce project consiste à intégrer, grâce à une maquette figma, la page d'accueil de l'agence Booki grâce à du HTML et CSS puis de la décliner en plusieurs versions pour permettre d'avoir du responsive quelque soit la résolution d'écran de l'utilisateur",
+        "githubLink": "https://github.com/Nomera67/OC-projet2",
+        "liveLink": "",
+        "slug": "booki"
+    }
+]   

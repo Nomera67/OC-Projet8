@@ -1,0 +1,31 @@
+.email{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: flex-end;
+        align-items: center;
+        height: 190px;
+        font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+    &__address{
+        transition: color .5s ease;
+        &:hover{
+            color: $secondary-text-color;
+        }
+    }
+    &__button{
+        width: 100%;
+        border: 1px solid $secondary-text-color;
+        background-color: transparent;
+        color: $secondary-text-color;
+        padding: 10px 5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+        &:hover{
+            background-color: $secondary-text-color;
+            color: $main-text-color;
+        }
+    }
+}

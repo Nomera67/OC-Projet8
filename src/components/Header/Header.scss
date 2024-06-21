@@ -1,12 +1,14 @@
 .header{
-    margin: auto;
-    max-width: 1440px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
     font-size: $regular-size;
-    height: 4rem;
+    height: $header-size;
     &__logo{
         font-family: 'Yellowtail', sans-serif;
         font-size: $logo-size;
