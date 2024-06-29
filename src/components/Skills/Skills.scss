@@ -1,0 +1,33 @@
+.skills{
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 30px;
+    &__title{
+        position: sticky;
+        top: $header-size;
+        height: fit-content;
+        line-height: 1.1;
+        font-size: $third-title-size;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex: 1;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &>h3{
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+        &>ul{
+            list-style-type: '- ';
+            padding-left: 40px;
+            font-size: $lower-size;
+        }
+    }
+}
