@@ -1,0 +1,42 @@
+[
+    {
+        "period": "2023 - Maintenant",
+        "title": "Alternant chez AV-Connexion",
+        "description": "AV-Connexion est la société qui m'a accueilli pour mon apprentissage de développeur web. C'est une entreprise dédiée à l'audiovisuel où les projets sont innovants et nombreux. C'est aussi là que va se tracer mon futur professionnel."
+    },
+    {
+        "period": "2023 - Maintenant",
+        "title": "Formation en alternance de développeur web chez OpenClassrooms",
+        "description": "Une formation en alternance qui me permet d'acquérir les bases du développement web dans un milieu professionnel et me former à devenir un travailleur efficace dans mon métier."
+    },
+    {
+      "period": "2022 - 2023",
+      "title": "Auto-apprentissage du développement Front-End",
+      "description": "D'abord tourné vers l'apprentissage général du développement web, je me suis tourné peu à peu vers le Front-End du fait de ma volonté de création visuelle."
+    },
+    {
+      "period": "2021 - 2022",
+      "title": "Voyages",
+      "description": "Une année consacrée uniquement aux voyages et à la découverte d'une partie de l'Europe :",
+      "details": ["Allemagne", "Autriche", "Croatie", "Grèce", "Italie", "Luxembourg", "Pologne", "Slovénie", "Suisse"]
+    },
+    {
+      "period": "2019 - 2021",
+      "title": "Conseiller clientèle",
+      "description": "Un métier qui permet d'acquérir des compétences particulières :",
+      "details": ["Le travail sous pression", "Le suivi de procédures", "La rédaction de documentations", "Une capacité d'analyse qui se veut rapide même sur des sujets complexes", "L'entraide et l'importance de l'esprit d'équipe"]
+    },
+    {
+      "period": "2017 - 2018",
+      "title": "Service civique volontaire",
+      "description": "Une expérience unique dans une mairie qui m'a permis d'utiliser mes compétences dans la préservation du patrimoine et sa promotion en :",
+      "details": ["Créant des événements pour la vie du village", "Animant des expositions", "Cherchant des subventions nationales et européennes", "Montant des projets de restauration du patrimoine tout en les voyant se concrétiser", "Assurant un lien entre le village et une communauté de communes"]
+    },
+    {
+      "period": "2012 - 2016",
+      "title": "Université d'histoire, histoire de l'art et archéologie",
+      "description": "Des études spécifiques mais qui m'ont appris à aller de l'avant en développant mon caractère et des capacités pour :",
+      "details": ["Analyser des documents et en retirer des informations", "Synthétiser des sources diverses et les recouper", "Focaliser mon attention pendant plusieurs heures", "Travailler en groupe et monter des projets"]
+    }
+  ]
+  
