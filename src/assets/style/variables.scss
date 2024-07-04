@@ -4,15 +4,19 @@
 $main-text-color: #FFFFFF;
 $secondary-text-color: #15EAD5;
 $main-background-color: #020202; 
+$button-form-disabled: rgba(128,128,128,1);
 
 
 // Font-size
 $main-size: clamp(2rem, 5vw, 4rem);
 $secondary-size: clamp(1.2rem, 3vw, 2rem);
+$mobile-title: clamp(0.75rem, 10vw, 3.5rem);
 $title-size: clamp(1.5rem, 5vw, 3rem);
 $subtitle-size: clamp(1rem, 3vw, 1.5rem);
 $third-title-size: clamp(1.1rem, 3vw, 1.3rem); 
 $lower-size: clamp(0.8rem, 2vw, 1rem);
+$button-font-size: clamp(0.8rem, 3vw, 1rem);
 $logo-size: 1.5rem;
 $regular-size: 1rem;
 $header-size: 3.5rem;
+$input-size: 1.2rem;

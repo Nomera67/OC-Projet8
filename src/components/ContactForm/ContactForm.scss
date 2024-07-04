@@ -1,0 +1,371 @@
+// Keyframes to animate text and parts of form
+
+@keyframes leftTitleAppear {
+  from {
+    transform: translate(-30%, -20%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes middleTitleAppear {
+  from {
+    transform: translate(-10%, -30%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes littleTitleAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rightTitleAppear {
+  from {
+    transform: translate(50%, 20%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes contactAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contactSubmitAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes contactCancelAppear {
+  from {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes successMessage {
+    from {
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+// Styling of form
+
+.form {
+  position: relative;
+  &__need {
+    position: absolute;
+    bottom: 5px;
+    left: 60px;
+    color: $secondary-text-color;
+    display: inline-block;
+    &:hover {
+      color: $secondary-text-color;
+    }
+  }
+  &__page {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: 2s backwards linear 1 contactAppear;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 40px 60px;
+  }
+  &__title {
+    font-family: 'Yellowtail', sans-serif;
+    font-size: $mobile-title;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    & > span {
+      display: inline-block;
+      overflow: visible;
+    }
+    & :nth-child(1) {
+      animation: 3s backwards 0.5s 1 leftTitleAppear;
+    }
+    & :nth-child(2) {
+      animation: 3s backwards 1.2s 1 middleTitleAppear;
+    }
+    & :nth-child(3) {
+      animation: 3s backwards 1s 1 littleTitleAppear;
+      color: $secondary-text-color;
+    }
+    & :nth-child(4) {
+      animation: 3s backwards 0.75s 1 rightTitleAppear;
+      color: $secondary-text-color;
+    }
+  }
+  &__item {
+    &:hover {
+      & input::placeholder {
+        color: $secondary-text-color;
+      }
+      &,
+      .form__grid1,
+      .form__grid2,
+      .form__grid3,
+      .form__grid4,
+      .form__grid5,
+      .form__grid6 {
+        border-bottom: 1px solid $secondary-text-color;
+      }
+    }
+  }
+  &__grid1 {
+    grid-area: 1 / 1 / 2 / 2;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    transition: all 0.2s linear;
+  }
+  &__grid2 {
+    grid-area: 1 / 2 / 2 / 3;
+    border-bottom: 1px solid white;
+    transition: all 0.2s linear;
+  }
+  &__grid3 {
+    grid-area: 2 / 1 / 3 / 2;
+    border-bottom: 1px solid white;
+    transition: all 0.2s linear;
+  }
+  &__grid4 {
+    grid-area: 2 / 2 / 3 / 3;
+    border-bottom: 1px solid white;
+    transition: all 0.2s linear;
+  }
+  &__grid5 {
+    grid-area: 3 / 1 / 4 / 3;
+    border-bottom: 1px solid white;
+    transition: all 0.2s linear;
+  }
+  &__grid6 {
+    grid-area: 4 / 1 / 5 / 3;
+    position: relative;
+  }
+  &__success{
+    position: absolute;
+    width: fit-content;
+    text-align: center;
+    text-wrap: balance;
+    color: $secondary-text-color;
+    top: 75px;
+    opacity: 0;
+    animation: 2s backwards linear 1 successMessage;
+  }
+  &__message {
+    & > label {
+      & > input {
+        width: 100%;
+      }
+    }
+    &:hover {
+      &,
+      .form__grid6 {
+        border-bottom: 1px solid $secondary-text-color;
+      }
+      & input::placeholder {
+        color: $secondary-text-color;
+      }
+    }
+  }
+  &__buttons {
+    margin: 10px auto;
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    gap: 20px;
+    &__submit {
+      animation: contactSubmitAppear 1.5s backwards linear;
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -4em 0 0 rgb(34, 34, 34);
+        color: $secondary-text-color;
+        border: 1px solid $secondary-text-color;
+        transform: translateY(-5%);
+      }
+      &:disabled {
+        cursor: default;
+        background-color: $button-form-disabled;
+        &:hover,
+        &:focus {
+          transform: translateY(0%);
+          box-shadow: inset 0 -4em 0 0 rgb(31, 31, 31);
+          color: white;
+          border: 1px solid white;
+        }
+      }
+    }
+    &__cancel {
+      animation: contactCancelAppear 1.5s backwards linear;
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -4em 0 0 rgb(34, 34, 34);
+        color: $secondary-text-color;
+        border: 1px solid $secondary-text-color;
+        transform: translateY(-5%);
+      }
+    }
+  }
+}
+
+.buttons {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: $button-font-size;
+  border: 1px solid white;
+  color: white;
+  transition: 0.2s all linear;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+}
+
+input {
+  padding: 25px 60px;
+  font-size: $input-size;
+  transition: 0.5s box-shadow linear;
+  transition: 0.5s background-color linear;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+  &::placeholder {
+    transition: all 0.2s linear;
+    color: rgba(143, 143, 143, 0.9);
+  }
+  &:focus {
+    box-shadow: inset 50em 0 0 0 rgba(128, 128, 128, 0.2), inset 50em 0 0 0 rgba(128, 128, 128, 0.2);
+    color: white;
+  }
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    background-color: rgba(21, 234, 213, 0.3);
+  }
+}
+
+@media (max-width: 500px) {
+  input {
+    padding: 0;
+    width: 80%;
+    &::placeholder {
+      color: rgba(143, 143, 143, 0.9);
+      width: 100%;
+    }
+  }
+  .form {
+    &__container {
+      margin-top: 4rem;
+      width: 100%;
+      padding: 30px 5px;
+      border-radius: 0px;
+    }
+    &__grid1,
+    &__grid2,
+    &__grid3,
+    &__grid4,
+    &__grid5,
+    &__grid6 {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &__grid6 {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    &__page {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      animation: 2s backwards linear 1 contactAppear;
+    }
+    &__grid1,
+    &__grid2,
+    &__grid3,
+    &__grid4,
+    &__grid5,
+    &__grid6 {
+      grid-area: auto;
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+}
