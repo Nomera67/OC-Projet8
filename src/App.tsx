@@ -10,11 +10,19 @@ import Contact from './pages/Contact/Contact';
 import NotFound from './pages/NotFound/NotFound';
 import ProjectCard from './components/ProjectCard/ProjectCard';
 
+import useScrollToTop from './hooks/useScrollToTop';
 
 function App() {
 
+  function ScrollHandler() {
+    useScrollToTop();
+    return null;
+  }
+  
+
   return (
     <Router>
+      <ScrollHandler />
       <Header />
       <main>
         <Routes>
@@ -29,5 +37,7 @@ function App() {
     </Router>
   )
 }
+
+
 
 export default App;
