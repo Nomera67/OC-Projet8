@@ -58,7 +58,7 @@ function ProjectCard() {
                 <p className='project__card_description'>{project.description}</p>
                 <div className="project__card__links">
                     {project.githubLink ? (
-                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className='project__card__link'>
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className='project__card__link' aria-label={`Lien vers le repository GitHub du projet ${project.name}`}>
                             <img src={githubLogo} alt="" className='project__card__link__img1'/>
                             <img src={githubLogoMint} alt="" className='project__card__link__img2'/>
                         </a>
@@ -66,7 +66,7 @@ function ProjectCard() {
                         <a href="#" className="disabled" aria-disabled="true">Aucun GitHub</a>
                     )}
                     {project.liveLink ? (
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className='project__card__link'>
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className='project__card__link' aria-label={`Lien vers l'hébergement du projet ${project.name}`}>
                         <img src={webLogo} alt="" className='project__card__link__img1'/>
                         <img src={webLogoMint} alt="" className='project__card__link__img2'/>
                     </a>

@@ -1,23 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Error.scss';
 import contactLogo from '../../assets/icons/contact.png';
 import homeLogo from '../../assets/icons/home.png';
 import aboutLogo from '../../assets/icons/about.png';
 
 function Error() {
-    const navigate = useNavigate();
-
-    const returnHome = () => {
-        navigate('/');
-    };
-
-    const goAbout = () => {
-        navigate('/about');
-    };
-
-    const goContact = () => {
-        navigate('/contact');
-    };
 
     return (
         <div className="nf__container">
@@ -31,18 +18,18 @@ function Error() {
             <div className="nf__item__redirection">
                 <p>Vous pouvez continuer votre navigation simplement :</p>
                 <div className="nf__item__buttons">
-                <div className="nf__item__card" onClick={returnHome}>
-                    <img src={homeLogo} alt="icône de maison" />
-                    <p>Retourner à l'accueil</p>
-                </div>
-                <div className="nf__item__card" onClick={goAbout}>
-                    <img src={aboutLogo} alt="icône d'information" />
-                    <p>Envie d'en savoir un peu plus ?</p>
-                </div>
-                <div className="nf__item__card" onClick={goContact}>
-                    <img src={contactLogo} alt="icône de contact" />
-                    <p>Me contacter</p>
-                </div>
+                    <Link to="/" className="nf__item__card" aria-label="Retourner à l'accueil">
+                        <img src={homeLogo} alt="icône de maison" />
+                        <p>Retourner à l'accueil</p>
+                    </Link>
+                    <Link to="/about" className="nf__item__card" aria-label="Lien vers la section à-propos">
+                        <img src={aboutLogo} alt="icône d'information" />
+                        <p>Envie d'en savoir un peu plus ?</p>
+                    </Link>
+                    <Link to="/contact" className="nf__item__card" aria-label="Me contacter">
+                        <img src={contactLogo} alt="icône de contact" />
+                        <p>Me contacter</p>
+                    </Link>
                 </div>
             </div>
             </div>

@@ -73,7 +73,7 @@ function ProjectList() {
             {noMatches && <p className='projects__cards__error'>Aucun projet ne correspond à votre recherche.</p>}
             <div className="projects__cards">
                 {filteredProjects.map((project, index) => (
-                    <Link to={`/projects/${project.slug}`} className="projects__cards__container" key={index}>
+                    <Link to={`/projects/${project.slug}`} className="projects__cards__container" key={index} aria-label={`Lien vers le projet ${project.name}`}>
                         <img src={project.image} alt={project.name} className='projects__cards__images'/>
                         <div className="projects__cards__content">
                             <h3 className='projects__cards__titles'>{project.name}</h3>
