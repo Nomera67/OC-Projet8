@@ -56,6 +56,7 @@ function ContactForm() {
                 placeholder="Nom *"
                 value={contactName}
                 onChange={(e) => setContactName(e.target.value)}
+                aria-label="Votre nom"
                 required
               />
             </label>
@@ -69,6 +70,7 @@ function ContactForm() {
                 placeholder="Prénom *"
                 value={contactSurname}
                 onChange={(e) => setContactSurname(e.target.value)}
+                aria-label="Votre prénom"
                 required
               />
             </label>
@@ -82,6 +84,7 @@ function ContactForm() {
                 placeholder="Votre email *"
                 value={contactEmail}
                 onChange={(e) => setContactEmail(e.target.value)}
+                aria-label="Votre email"
                 required
               />
             </label>
@@ -95,6 +98,7 @@ function ContactForm() {
                 placeholder="Votre société"
                 value={contactSociety}
                 onChange={(e) => setContactSociety(e.target.value)}
+                aria-label="Votre société"
               />
             </label>
           </div>
@@ -107,13 +111,17 @@ function ContactForm() {
                 placeholder="Votre message *"
                 value={contactMessage}
                 onChange={(e) => setContactMessage(e.target.value)}
+                aria-label="Votre message"
                 required
               />
             </label>
           </div>
           <div className="form__buttons form__grid6">
             {isMessageSent && <p className="form__success">Votre message a bien été envoyé</p>}
-            <button className="form__buttons__submit buttons" type="submit" disabled={!contactName || !contactSurname || !contactEmail || !contactMessage}>
+            <button 
+              className="form__buttons__submit buttons" 
+              type="submit" disabled={!contactName || !contactSurname || !contactEmail || !contactMessage} 
+              aria-label="Envoyer le message">
               Envoyer
             </button>
             <button className="form__buttons__cancel buttons" type="reset" onClick={() => {
@@ -122,7 +130,9 @@ function ContactForm() {
               setContactEmail('');
               setContactSociety('');
               setContactMessage('');
-            }}>
+            }}
+            aria-label="Annuler le formulaire"
+            >
               Annuler
             </button>
           </div>

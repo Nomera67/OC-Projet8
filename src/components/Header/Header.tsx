@@ -54,13 +54,13 @@ function Header() {
             <nav className={`header__nav ${isNavVisible ? 'visible' : ''}`} id="navBar">
                 <ul id="primary-navigation" className="nav__list" data-visible={isNavVisible}>
                     <li className="nav__item">
-                        <NavLink to="/home" className={location.pathname === '/home' ? 'active' : ''}>Accueil</NavLink>
+                        <NavLink to="/home" className={location.pathname === '/home' ? 'active' : ''} aria-label={`Lien vers l'accueil`}>Accueil</NavLink>
                     </li>
                     <li className="nav__item">
-                        <NavLink to="/about" className={location.pathname === '/about' ? 'active' : ''}>À propos</NavLink>
+                        <NavLink to="/about" className={location.pathname === '/about' ? 'active' : ''} aria-label={`Lien vers la section à-propos`}>À propos</NavLink>
                     </li>
                     <li className="nav__item">
-                        <NavLink to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</NavLink>
+                        <NavLink to="/contact" className={location.pathname === '/contact' ? 'active' : ''} aria-label={`Lien vers la section de contact`}>Contact</NavLink>
                     </li>
                     <div className="nav__list__points"></div>
                     <div className="nav__list__background" id="background__menu"></div>
