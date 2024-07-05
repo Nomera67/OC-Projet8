@@ -1,3 +1,40 @@
+// Keyframes for title and subtitle appereance
+
+@keyframes titleAppear {
+    from{
+        opacity: 0;
+        transform: translateX(-20%);
+    }   
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    } 
+}
+
+@keyframes subtitleAppear {
+    from{
+        opacity: 0;
+        transform: translateY(-20%);
+    }   
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+@keyframes introductionAppear {
+    from{
+        opacity: 0;
+        transform: scale(.9);
+        border-radius: 0%;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 30% 15% 30% 15%;
+    }
+}
+
 .introduction{
     &__main{
         display: flex;
@@ -14,14 +51,40 @@
         text-align: left;
         &>h1{
             font-size: $title-size;
+            animation: 1s linear backwards titleAppear;
         }
         &>p{
             font-size: $subtitle-size;
+            animation: 1s linear backwards subtitleAppear;
         }
     }
     &__img{
         height: 350px;
         border-radius: 30% 15% 30% 15%;
         overflow: hidden;
+        animation: 1.5s linear backwards introductionAppear;
+    }
+}
+
+@media (max-width: 800px) {
+    .introduction{
+        border: 1px solid green;
+        &__title{
+            max-width: 100%;
+            height: fit-content;
+            padding: 0 5px;
+            text-align: center;
+        }
+        
+        &__main{
+            flex-direction: column;
+            margin:  5rem auto 0 auto;
+            width: 100%;
+            padding: 0 5px;
+            gap: 10px;
+        }
+        &__img{
+            height: 250px;
+        }
     }
 }

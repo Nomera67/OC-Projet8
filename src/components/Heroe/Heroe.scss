@@ -6,6 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding: 10vw;
     &__presentation{
         display: flex;
         flex-direction: column;
@@ -25,5 +26,21 @@
         justify-content: flex-end;
         height: 190px;
         font-size: $lower-size;
+    }
+}
+
+@media (max-width: 1000px) {
+    .heroe{
+        flex-direction: column;
+        height: 70vh;
+        gap: 20px;
+        &__presentation{
+            align-self: flex-start;
+        }
+        &__contact{
+            align-self: flex-end;
+            justify-self: center;
+            height: fit-content;
+        }
     }
 }

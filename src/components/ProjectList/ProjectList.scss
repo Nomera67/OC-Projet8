@@ -95,3 +95,49 @@
     background-color: $secondary-text-color;
     color: $main-text-color;
 }
+
+@media (max-width: 700px) {
+    .projects{
+        &__filters{
+            &__container{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .projects{
+        &__cards{    
+            &__container{
+                height: 205px;
+                width: 100%;
+                border-radius: 0px;
+                &:hover {
+                    &> .projects__cards__content{
+                        transform: translateY(20%);
+                        &> .projects__cards__technologies{
+                            color: $secondary-text-color;
+                        }
+                    }
+                    
+                    &> .projects__cards__images{
+                        filter: brightness(100%);
+                    }
+                }
+            }
+            &__content{
+                position: absolute;
+                bottom: 30px;
+                flex-wrap: wrap;
+                left: 10px;
+                color: $main-text-color;
+                width: 120%;
+                border-radius: 20px;
+                transform: translateY(45%);
+                transition: transform 0.5s ease;
+                text-shadow: 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1), 4px 4px 16px rgba(2, 2, 2, 1) ;
+            }
+        }
+    }
+}

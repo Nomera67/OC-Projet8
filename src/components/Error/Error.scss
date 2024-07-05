@@ -1,0 +1,118 @@
+.nf{
+    &__container{
+        &>a{
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            background: transparent;
+            color: $secondary-text-color;
+            border: 1px solid $secondary-text-color;
+            border-radius: 10px;
+            cursor: pointer;
+            transition:all .3s ease-in-out;
+            &:hover{
+                background: $secondary-text-color;
+                color: white;
+            }
+        }
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/backgrounds/error-background.jpg');
+    background-position: center;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(1rem);
+        padding: 40px 80px;
+        border-radius: 20px;
+        &__message{
+            &>p{
+                text-align: center;
+                font-size: clamp(.9rem, 3vw, 1.2rem);
+                &>span{
+                    color: $secondary-text-color;
+                }
+            }
+        }
+        &__redirection{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        &__buttons{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        &__card{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            width: 240px;
+            height: 100px;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &>p{
+                font-size: clamp(0.8rem, 3vw, 1rem);
+            }
+            &:hover{
+                background: rgba(21, 234, 213, 0.3);
+            }
+            &>img{
+                width: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .nf{
+        &__container{
+            // margin: 5rem 0 0 0;
+            &>a{
+                font-size: 0.5rem;
+                position: inherit;
+                width: fit-content;
+                margin: 5px;
+            }
+        }
+        &__item{
+            padding: 10px 10px;
+        }
+    }
+    
+}
+
+@media (max-width: 1000px){
+    .nf{
+        &__item{
+            margin-top: 6rem;
+            &__redirection{
+                &>p{
+                    text-align: center;
+                }
+            }
+            &__buttons{
+                flex-direction: column;
+            }
+        }
+    }
+}
