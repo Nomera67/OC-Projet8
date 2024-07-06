@@ -1,9 +1,36 @@
 [
     {
+        "name": "Synoptique tactile",
+        "technologies": ["React", "CSS", "TypeScript", "Node.js"],
+        "image": "/assets/backgrounds-projects/synoptique.webp",
+        "description": "Ce synoptique tactile permet de gérer un système de conférence Televic entièrement. Il gère l'ajout, la modification et la suppression des salles à contrôler, leur adresse IP, le nombre de microphones présents et leurs positions, le couplage logiciel de microphones et permet à l'opérateur de changer les modes de couleurs pour correspondre à un handicap visuel précis. Il comporte une partie d'administration protégée par mot de passe où une fonction de drag & drop est activée pour gérer les salles. Un back-end a aussi été créé pour permettre la gestion des salles, sauvegarder leur configuration et faciliter la maintenance. Cette application est entièrement tournée autour de React et Node.js. Du fait de la confidentialité de ce développement aucun hébergement ou GitHub ne peut être partagé mais une démonstration peut être faite sur demande.",
+        "githubLink": "",
+        "liveLink": "",
+        "slug": "synoptique-tactile"
+    },
+    {
+        "name": "Art Hover",
+        "technologies": ["Angular", "SCSS", "TypeScript", "API", "JavaScript"],
+        "image": "/assets/backgrounds-projects/arthover.webp",
+        "description": "Arthover est un site basé sur Angular, TypeScript et SCSS mettant en avant une collection de tableaux venant de la base de données du Metropolitan Museum of Art de New York.",
+        "githubLink": "https://github.com/Nomera67/art-hover",
+        "liveLink": "",
+        "slug": "art-hover"
+    },
+    {
+        "name": "Kasa",
+        "technologies": ["React", "SCSS", "JavaScript", "Figma"],
+        "image": "/assets/backgrounds-projects/kasa.webp",
+        "description": "Kasa est un projet OpenClassrooms consistant à intégrer la maquette d'un site internet grâce à React, SCSS et JavaSCript que ce soit dans sa version desktop ou sa version mobile.",
+        "githubLink": "https://github.com/Nomera67/OC-projet6",
+        "liveLink": "",
+        "slug": "kasa"
+    },
+    {
         "name": "Sophie Bluel",
         "technologies": ["HTML5", "CSS3", "JavaScript"],
         "image": "/assets/backgrounds-projects/sophie-bluel.webp",
-        "description": "Ce projet consiste à créer la partie dynamique du site d'une architecte d'intérieur, Sophie Bluel, et de permettre sa connexion pour ajouter et supprimer des projets de son portfolio.",
+        "description": "Ce projet OpenClassrooms consiste à créer la partie dynamique du site d'une architecte d'intérieur, Sophie Bluel, et de permettre sa connexion pour ajouter et supprimer des projets de son portfolio.",
         "githubLink": "https://github.com/Nomera67/OC-projet3",
         "liveLink": "",
         "slug": "sophie-bluel"
@@ -12,34 +39,16 @@
         "name": "Visit Panama",
         "technologies": ["Angular", "SCSS", "TypeScript"],
         "image": "/assets/backgrounds-projects/visit-panama.webp",
-        "description": "Visit Panama permet d'avoir un aperçu d'une plateforme dédiée au tourisme au Panama avec plusieurs effets de parallaxe",
+        "description": "Visit Panama permet d'avoir un aperçu d'une plateforme dédiée au tourisme au Panama avec plusieurs effets de parallaxe.",
         "githubLink": "https://github.com/Nomera67/visit-panama",
         "liveLink": "",
         "slug": "visit-panama"
     },
     {
-        "name": "Art Hover",
-        "technologies": ["Angular", "SCSS", "TypeScript", "API", "JavaScript"],
-        "image": "/assets/backgrounds-projects/arthover.webp",
-        "description": "Arthover est un site basé sur Angular, TypeScript et SCSS mettant en avant une collection de tableaux venant de la base de données du Metropolitan Museum of Art de New York",
-        "githubLink": "https://github.com/Nomera67/art-hover",
-        "liveLink": "",
-        "slug": "art-hover"
-    },
-    {
-        "name": "Synoptique tactile",
-        "technologies": ["React", "CSS", "TypeScript", "Node.js"],
-        "image": "/assets/backgrounds-projects/console.webp",
-        "description": "Logiciel de gestion de centrale de conférence Televic",
-        "githubLink": "",
-        "liveLink": "",
-        "slug": "synoptique-tactile"
-    },
-    {
         "name": "Booki",
         "technologies": ["HTML5", "CSS3", "Figma"],
         "image": "/assets/backgrounds-projects/booki.webp",
-        "description": "Ce project consiste à intégrer, grâce à une maquette figma, la page d'accueil de l'agence Booki grâce à du HTML et CSS puis de la décliner en plusieurs versions pour permettre d'avoir du responsive quelque soit la résolution d'écran de l'utilisateur",
+        "description": "Ce project OpenClassrooms consiste à intégrer, grâce à une maquette figma, la page d'accueil de l'agence Booki grâce à du HTML et CSS puis de la décliner en plusieurs versions pour permettre d'avoir du responsive quelque soit la résolution d'écran de l'utilisateur.",
         "githubLink": "https://github.com/Nomera67/OC-projet2",
         "liveLink": "",
         "slug": "booki"
