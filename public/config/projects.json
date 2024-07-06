@@ -1,7 +1,7 @@
 [
     {
         "name": "Synoptique tactile",
-        "technologies": ["React", "CSS", "TypeScript", "Node.js"],
+        "technologies": ["React", "CSS3", "TypeScript", "Node.js"],
         "image": "/assets/backgrounds-projects/synoptique.webp",
         "description": "Ce synoptique tactile permet de gérer un système de conférence Televic entièrement. Il gère l'ajout, la modification et la suppression des salles à contrôler, leur adresse IP, le nombre de microphones présents et leurs positions, le couplage logiciel de microphones et permet à l'opérateur de changer les modes de couleurs pour correspondre à un handicap visuel précis. Il comporte une partie d'administration protégée par mot de passe où une fonction de drag & drop est activée pour gérer les salles. Un back-end a aussi été créé pour permettre la gestion des salles, sauvegarder leur configuration et faciliter la maintenance. Cette application est entièrement tournée autour de React et Node.js. Du fait de la confidentialité de ce développement aucun hébergement ou GitHub ne peut être partagé mais une démonstration peut être faite sur demande.",
         "githubLink": "",
