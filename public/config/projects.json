@@ -4,6 +4,8 @@
         "technologies": ["React", "CSS3", "TypeScript", "Node.js"],
         "image": "/assets/backgrounds-projects/synoptique.webp",
         "description": "Ce synoptique tactile permet de gérer un système de conférence Televic entièrement. Il gère l'ajout, la modification et la suppression des salles à contrôler, leur adresse IP, le nombre de microphones présents et leurs positions, le couplage logiciel de microphones et permet à l'opérateur de changer les modes de couleurs pour correspondre à un handicap visuel précis. Il comporte une partie d'administration protégée par mot de passe où une fonction de drag & drop est activée pour gérer les salles. Un back-end a aussi été créé pour permettre la gestion des salles, sauvegarder leur configuration et faciliter la maintenance. Cette application est entièrement tournée autour de React et Node.js. Du fait de la confidentialité de ce développement aucun hébergement ou GitHub ne peut être partagé mais une démonstration peut être faite sur demande.",
+        "competence": "Ce projet est sûrement le plus imposant et long que j'ai eu à mener à bien. J'ai dû apprendre à planifier toutes mes actions, prendre en compte chaque changement demandé par le client tout en construisant le front-end puis le back-end dans un environnement cohérent. Ce projet m'a forcément apporté des compétences de code, que ce soit dans React, Node ou les différentes bibliothèques utilisées mais les compétences humaines ont été primordiales. Le projet n'aurait pas été possible sans prendre en compte cette dimension particulière tellement sa dépendance aux autres acteurs du chantier est importante.",
+        "difficulties": "Je n'avais que très peu de connaissances en back-end au commencement de ce développement et une application aussi importante était angoissante et motivante en même temps. L'étude de la documentation Node et de nombreux essais m'ont permis de mettre en place un back-end efficace et une planification minutieuse du développement m'a totalement enlevé cette perspective angoissante pour ne laisser que de l'envie d'aller de l'avant à la place.",
         "githubLink": "",
         "liveLink": "",
         "slug": "synoptique-tactile"
@@ -13,6 +15,8 @@
         "technologies": ["Angular", "SCSS", "TypeScript", "API", "JavaScript"],
         "image": "/assets/backgrounds-projects/arthover.webp",
         "description": "Arthover est un site basé sur Angular, TypeScript et SCSS mettant en avant une collection de tableaux venant de la base de données du Metropolitan Museum of Art de New York.",
+        "competence": "L'utilisation d'une API était un mystère pour moi avant ce projet. Celui-ci m'a permis d'utiliser une API connue et publique pour récupérer des données et les utiliser ensuite. Une mécanique particulière a aussi dû être trouvée pour le placement aléatoire des tuiles en mode desktop qui ne sont jamais au même endroit.",
+        "difficulties": "La difficultée principale a été de faire en sorte que chaque tuile corresponde à un tableau particulier avec une couleur aléatoire mais aussi un placement qui ne se répète pas. Les premiers essais ont été peu concluants du fait d'une logique que l'on pourrait qualifier d'aléatoire. Mais une solution a été trouvée et aucune carte ne peut se chevaucher. La difficulté d'adaptation aux résolutions mobiles a été compliqué et le jeu change de dimension avec de l'aléatoire jusqu'à l'affichage du tableau en lui-même. ",
         "githubLink": "https://github.com/Nomera67/art-hover",
         "liveLink": "",
         "slug": "art-hover"
@@ -22,6 +26,8 @@
         "technologies": ["React", "SCSS", "JavaScript", "Figma"],
         "image": "/assets/backgrounds-projects/kasa.webp",
         "description": "Kasa est un projet OpenClassrooms consistant à intégrer la maquette d'un site internet grâce à React, SCSS et JavaSCript que ce soit dans sa version desktop ou sa version mobile.",
+        "competence": "Ce projet est un développement classique avec une réutilisation de composants pour coller aux préceptes de React. C'était intéressant de se remettre aux bases dans un développement simple.",
+        "difficulties": "Il n'y a pas eu de difficultés spécifiques à ce projet. La création du composant de menu à déployer étant le pic de difficulté du projet mais étant assez simple à partir du moment où la logique était acquise.",
         "githubLink": "https://github.com/Nomera67/OC-projet6",
         "liveLink": "",
         "slug": "kasa"
@@ -30,7 +36,9 @@
         "name": "Sophie Bluel",
         "technologies": ["HTML5", "CSS3", "JavaScript"],
         "image": "/assets/backgrounds-projects/sophie-bluel.webp",
-        "description": "Ce projet OpenClassrooms consiste à créer la partie dynamique du site d'une architecte d'intérieur, Sophie Bluel, et de permettre sa connexion pour ajouter et supprimer des projets de son portfolio.",
+        "description": "Ce projet OpenClassrooms consiste à créer la partie dynamique du site d'une architecte d'intérieur, Sophie Bluel, et de permettre sa connexion pour ajouter et supprimer des projets de son portfolio. Une résolution de bugs et une optimisation SEO ont aussi été demandées par la suite.",
+        "competence": "Ce développement a été particulier. En effet je n'avais jamais repris le code d'un autre développeur et j'ai dû apprendre à débuguer un code que je n'avais pas fait en y allant par étapes successives. De la compréhension de la logique du premier développeur jusqu'à l'identification du bug et sa correction, c'était une toute nouvelle compétence que j'apprenais. Celle-ci a vite été complétée par les bases de la SEO et de l'optimisation qui ont ensuite été demandées.",
+        "difficulties": "La difficulté s'est retrouvée avec la présence d'une partie JQuery et d'une logique spécifique à un autre développeur. Du temps et de la patience m'ont permis de régler les différents bugs avec une partie de technique que je ne connaissais pas.",
         "githubLink": "https://github.com/Nomera67/OC-projet3",
         "liveLink": "",
         "slug": "sophie-bluel"
@@ -40,6 +48,8 @@
         "technologies": ["Angular", "SCSS", "TypeScript"],
         "image": "/assets/backgrounds-projects/visit-panama.webp",
         "description": "Visit Panama permet d'avoir un aperçu d'une plateforme dédiée au tourisme au Panama avec plusieurs effets de parallaxe.",
+        "competence": "Ce site n'a pas d'autre vocation que celle d'apprendre à faire quelques effets spécifiques et notamment de parallaxe. J'ai appris la base de tels effets, leur intérêt mais aussi la logique qu'il y a derrière. L'utilisation d'un mask avec Photoshop puis son inclusion dans le CSS m'ont aussi permis d'aller plus loin dans certaines idées spécifiques comme le passage d'un texte derrière des éléments du fond d'une page.",
+        "difficulties": "La parallaxe est un effet particulier que j'avais déjà vu mais jamais codé. Il m'a fallu apprendre la logique visuelle de ces effets et de les développer. Beaucoup de patience a été nécessaire car Visit Panama, en plus d'être dans mes premiers effets visuels avancés, était aussi un de mes tout premiers projets Angular.",
         "githubLink": "https://github.com/Nomera67/visit-panama",
         "liveLink": "",
         "slug": "visit-panama"
@@ -49,6 +59,8 @@
         "technologies": ["HTML5", "CSS3", "Figma"],
         "image": "/assets/backgrounds-projects/booki.webp",
         "description": "Ce project OpenClassrooms consiste à intégrer, grâce à une maquette figma, la page d'accueil de l'agence Booki grâce à du HTML et CSS puis de la décliner en plusieurs versions pour permettre d'avoir du responsive quelque soit la résolution d'écran de l'utilisateur.",
+        "competence": "Le développement de Booki m'a permis de reprendre les bases du HTML et du CSS. Pouvoir oublier JavaScript et me concentrer sur les bases était une bonne chose avant d'aller plus en avant sur d'autres projets.",
+        "difficulties": "Je n'ai pas eu de difficultés sur ce projet, bien au contraire, il m'a permis de faire quelque chose de simple pour me mettre dans le bain d'une formation d'une durée d'un an.",
         "githubLink": "https://github.com/Nomera67/OC-projet2",
         "liveLink": "",
         "slug": "booki"
