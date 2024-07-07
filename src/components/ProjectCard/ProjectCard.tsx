@@ -12,6 +12,8 @@ interface Project {
     technologies: string[];
     image: string;
     description: string;
+    competence: string;
+    difficulties: string;
     githubLink: string;
     liveLink: string;
     slug: string;
@@ -48,14 +50,26 @@ function ProjectCard() {
             <div className="project__card__content">
                 <h1 className="project__card__title highlight">{project.name}</h1>
                 <div className="project__card__technologies">
-                    <p>Technologies <span className='highlight'>utilisées :</span></p>
+                    <h2 className="project__card__subtitles">Technologies utilisées :</h2>
                     <ul className="project__card__list">
                         {project.technologies.map((tech, index) => (
-                            <li key={index}>{tech}</li>
+                            <li key={index}>- {tech}</li>
                         ))}
                     </ul>
                 </div>
-                <p className='project__card_description'>{project.description}</p>
+                <div className="project__card__contender">
+                    <h2 className="project__card__subtitles">Description du projet :</h2>
+                    <p className='project__card__description'>{project.description}</p>
+                </div>
+                <div className="project__card__contender">
+                    <h2 className="project__card__subtitles">Compétences acquises :</h2>
+                    <p className="project__card__description">{project.competence}</p>
+                </div>
+                <div className="project__card__contender">
+                    <h2 className="project__card__subtitles">Difficultés rencontrées :</h2>
+                    <p className='project__card__description'>{project.difficulties}</p>
+                </div>
+                
                 <div className="project__card__links">
                     {project.githubLink ? (
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className='project__card__link' aria-label={`Lien vers le repository GitHub du projet ${project.name}`}>

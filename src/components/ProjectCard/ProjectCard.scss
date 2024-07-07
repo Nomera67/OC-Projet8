@@ -16,6 +16,10 @@
     }
     &__title{
         font-size: $title-size;
+        font-family: 'Yellowtail', sans-serif;
+    }
+    &__technologies{
+        width: 100%;
     }
     &__content{
         display: flex;
@@ -68,20 +72,35 @@
             }
         }
     }
+    &__contender{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__subtitles{
+        font-family: 'Yellowtail', sans-serif;
+        font-size: $secondary-size;
+        color: $secondary-text-color;
+    }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     .project__card{
         flex-direction: column;
         gap: 1rem;
         height: 100%;
         width: 80%;
         margin: 15vh auto;
-        &__links {
-            gap: 0;
-        }
         &__content{
             align-items: center;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .project__card{
+        &__links {
+            gap: 0;
         }
     }
 }

@@ -66,10 +66,11 @@
     }
   }
   
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1650px) {
     .header {
         height: 5rem;
         justify-content: space-between;
+        backdrop-filter: blur(0rem);
 
         &__logo {
             font-size: 1.75rem;
@@ -222,5 +223,11 @@
     .nav__item:hover ~ .nav__list__background {
         background-position: center 45%;
         opacity: 0.4;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        backdrop-filter: blur(1rem);
     }
 }

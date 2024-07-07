@@ -27,3 +27,15 @@ a {
   width: 60%;
   background-color: $secondary-text-color;
 }
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+  scrollbar-width: 5px;
+  background: $secondary-text-color;
+  border-radius: 1px;
+}
+*::-webkit-scrollbar-track{
+  background: rgb(8, 8, 8);
+}
