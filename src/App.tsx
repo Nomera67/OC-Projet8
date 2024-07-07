@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound/NotFound';
 import ProjectCard from './components/ProjectCard/ProjectCard';
 
 import useScrollToTop from './hooks/useScrollToTop';
+import useDynamicTitle from './hooks/useDynamicTitle';
 
 function App() {
 
@@ -19,10 +20,15 @@ function App() {
     return null;
   }
   
+  function DynamicTitle() {
+    useDynamicTitle();
+    return null;
+  }
 
   return (
     <Router>
       <ScrollHandler />
+      <DynamicTitle />
       <Header />
       <main>
         <Routes>

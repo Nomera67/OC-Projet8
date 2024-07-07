@@ -23,6 +23,7 @@ function ProjectCard() {
     const { slug } = useParams<{ slug: string }>();
     const [project, setProject] = useState<Project | null>(null);
 
+    
     useEffect(() => {
         const fetchProject = async () => {
             try {
@@ -38,8 +39,16 @@ function ProjectCard() {
         fetchProject();
     }, [slug]);
 
+    useEffect(() => {
+        if (project) {
+            document.title = `${project.name} | Yan R. Portfolio`;
+        } else {
+            document.title = 'Projet non trouvé | Yan R. Portfolio';
+        }
+    }, [project]);
+
     if (!project) {
-        return <div>Projet non trouvé</div>;
+        return <div className="project__card__notfound">Aucun projet n'a été trouvé à cette adresse. Revenez à l'accueil, vous trouverez sûrement votre bonheur.</div>;
     }
 
     return (
