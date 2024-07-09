@@ -46,6 +46,12 @@ function Header() {
         };
     }, [isNavVisible]);
 
+    const handleNavLinkClick = () => {
+        setTimeout(() => {
+            setIsNavVisible(false);
+        }, 800);
+    };
+
     return (
         <header className='header'>
             <div className="header__logo" onClick={() => window.location.href = '/'}>
@@ -66,13 +72,13 @@ function Header() {
             <nav className={`header__nav ${isNavVisible ? 'visible' : ''}`} id="navBar" data-active-index={activeIndex}>
                 <ul id="primary-navigation" className="nav__list" data-visible={isNavVisible}>
                     <li className="nav__item">
-                        <NavLink to="/home" className={location.pathname === '/home' ? 'active' : ''} aria-label={`Lien vers l'accueil`}>Accueil</NavLink>
+                        <NavLink to="/home" className={location.pathname === '/home' ? 'active' : ''} onClick={handleNavLinkClick} aria-label={`Lien vers l'accueil`}>Accueil</NavLink>
                     </li>
                     <li className="nav__item">
-                        <NavLink to="/about" className={location.pathname === '/about' ? 'active' : ''} aria-label={`Lien vers la section à-propos`}>À propos</NavLink>
+                        <NavLink to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={handleNavLinkClick} aria-label={`Lien vers la section à-propos`}>À propos</NavLink>
                     </li>
                     <li className="nav__item">
-                        <NavLink to="/contact" className={location.pathname === '/contact' ? 'active' : ''} aria-label={`Lien vers la section de contact`}>Contact</NavLink>
+                        <NavLink to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={handleNavLinkClick} aria-label={`Lien vers la section de contact`}>Contact</NavLink>
                     </li>
                 </ul>
                 <div className="nav__list__points"></div>

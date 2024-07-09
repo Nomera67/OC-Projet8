@@ -158,7 +158,7 @@
             left: 0;
             top: 0;
             z-index: 1;
-            transition: opacity 800ms ease, background-position 800ms ease-in-out;
+            transition: opacity 300ms ease, background-position 600ms ease-in-out;
         }
 
         .nav__list__points {
@@ -180,7 +180,7 @@
         }
 
         .nav__item > a {
-            font-size: clamp(3rem, 8vw, 8rem);
+            font-size: clamp(2rem, 8vw, 3.5rem);
         }
     }
 
