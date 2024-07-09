@@ -11,61 +11,61 @@
     backdrop-filter: blur(1rem);
     background-color: $nav-toggle-color;
     font-size: $regular-size;
-  
+
     &__logo {
-      font-family: 'Yellowtail', sans-serif;
-      font-size: $logo-size;
-      cursor: pointer;
+        font-family: 'Yellowtail', sans-serif;
+        font-size: $logo-size;
+        cursor: pointer;
     }
-  
+
     .mobileNavToggle {
-      display: none;
+        display: none;
     }
-  
+
     &__nav {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-  
-      & > a {
-        color: $main-text-color;
-        transition: color .3s ease;
-  
-        &:hover {
-          color: $secondary-text-color;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        & > a {
+            color: $main-text-color;
+            transition: color .3s ease;
+
+            &:hover {
+                color: $secondary-text-color;
+            }
         }
-      }
     }
-  
+
     .active {
-      text-decoration: underline $secondary-text-color;
-      text-underline-offset: 5px;
+        text-decoration: underline $secondary-text-color;
+        text-underline-offset: 5px;
     }
-  }
-  
-  .nav__list {
+}
+
+.nav__list {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     gap: 25px;
     font-size: $regular-size;
-  
-    &__points, &__background {
-      display: none;
-    }
-  }
-  
-  .nav__item > a {
+}
+
+.nav__list__points, .nav__list__background {
+    display: none;
+}
+
+.nav__item > a {
     text-decoration: none;
     color: white;
     cursor: pointer;
     transition: all .5s;
-  
+
     &:hover {
-      color: $secondary-text-color;
+        color: $secondary-text-color;
     }
-  }
-  
+}
+
 @media screen and (max-width: 1650px) {
     .header {
         height: 5rem;
@@ -80,40 +80,41 @@
             z-index: 3;
         }
 
-    .mobileNavToggle {
-        display: block;
-        position: fixed;
-        border: 0;
-        width: 24px;
-        height: 24px;
-        top: 1.60rem;
-        right: 2rem;
-        z-index: 11;
-        cursor: pointer;
-        background: transparent;
+        .mobileNavToggle {
+            display: block;
+            position: fixed;
+            border: 0;
+            width: 24px;
+            height: 24px;
+            top: 1.60rem;
+            right: 2rem;
+            z-index: 11;
+            cursor: pointer;
+            background: transparent;
 
-        &.expanded {
-            transform: rotate(45deg);
-            transition: all 0.3s ease-in-out;
-            transition-delay: 0.6s;
+            &.expanded {
+                transform: rotate(45deg);
+                transition: all 0.3s ease-in-out;
+                transition-delay: 0.6s;
 
-            .toggle__line:nth-child(2) {
-            width: 0px;
-            }
+                .toggle__line:nth-child(2) {
+                    width: 0px;
+                }
 
-            .toggle__line:nth-child(1), .toggle__line:nth-child(3) {
-            transition-delay: 0.3s;
-            }
+                .toggle__line:nth-child(1), .toggle__line:nth-child(3) {
+                    transition-delay: 0.3s;
+                }
 
-            .toggle__line:nth-child(1) {
-            transform: translateY(4px);
-            }
+                .toggle__line:nth-child(1) {
+                    transform: translateY(4px);
+                }
 
-            .toggle__line:nth-child(3) {
-            transform: translateY(-12px) rotate(90deg);
+                .toggle__line:nth-child(3) {
+                    transform: translateY(-12px) rotate(90deg);
+                }
             }
         }
-    }}
+    }
 
     .toggle__line {
         width: 25px;
@@ -124,7 +125,7 @@
         transition: all 0.3s ease-in-out;
     }
 
-    .nav__list{
+    .nav__list {
         flex-direction: column;
         padding-bottom: 30vh;
     }
@@ -174,7 +175,7 @@
             background-image: url('../../assets/backgrounds/navbar-background.jpg');
         }
 
-        .nav__item{
+        .nav__item {
             z-index: 4;
         }
 
@@ -183,27 +184,27 @@
         }
     }
 
-    .nav__list[data-active-index="0"] > .nav__list__points {
+    .header__nav[data-active-index="0"] .nav__list__points {
         background-position: center 20%;
     }
 
-    .nav__list[data-active-index="0"] > #background__menu {
+    .header__nav[data-active-index="0"] #background__menu {
         background-position: center 40%;
     }
 
-    .nav__list[data-active-index="1"] > .nav__list__points {
+    .header__nav[data-active-index="1"] .nav__list__points {
         background-position: center 40%;
     }
 
-    .nav__list[data-active-index="1"] > #background__menu {
+    .header__nav[data-active-index="1"] #background__menu {
         background-position: center 50%;
     }
 
-    .nav__list[data-active-index="2"] > .nav__list__points {
+    .header__nav[data-active-index="2"] .nav__list__points {
         background-position: center 60%;
     }
 
-    .nav__list[data-active-index="2"] > #background__menu {
+    .header__nav[data-active-index="2"] #background__menu {
         background-position: center 60%;
     }
 
