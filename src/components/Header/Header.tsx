@@ -5,6 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 function Header() {
     const [isNavVisible, setIsNavVisible] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     const toggleNav = () => {
         setIsNavVisible(!isNavVisible);
@@ -36,20 +37,38 @@ function Header() {
         };
 
         items.forEach((item, index) => {
-            item.addEventListener('mouseover', () => handleMouseOver(index));
-        });
+            const mouseOverListener = () => handleMouseOver(index);
+            item.addEventListener('mouseover', mouseOverListener);
+            item.addEventListener('mouseout', () => setActiveIndex(-1)); // Optional: Reset on mouse out
 
-        return () => {
-            items.forEach((item) => {
-                item.removeEventListener('mouseover', () => handleMouseOver);
-            });
-        };
+            return () => {
+                item.removeEventListener('mouseover', mouseOverListener);
+                item.removeEventListener('mouseout', () => setActiveIndex(-1)); // Optional: Reset on mouse out
+            };
+        });
     }, [isNavVisible]);
 
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+
+        return () => {
+            window.removeEventListener('resize', checkIfMobile);
+        };
+    }, []);
+
     const handleNavLinkClick = () => {
-        setTimeout(() => {
+        if (isMobile) {
+            setTimeout(() => {
+                setIsNavVisible(false);
+            }, 1000);
+        } else {
             setIsNavVisible(false);
-        }, 800);
+        }
     };
 
     return (
