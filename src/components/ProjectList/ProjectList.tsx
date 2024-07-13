@@ -57,7 +57,7 @@ function ProjectList() {
             <div className="projects__filters__container">
                 <p className="projects__choice">Filtrez les projets :</p>
                 <div className="projects__filters">
-                    <button className="projects__filter" onClick={() => setFilter([])}>Reset</button>
+                    <button className="projects__reset" onClick={() => setFilter([])}>Reset</button>
                     {technologies.map(tech => (
                         <button
                             key={tech}

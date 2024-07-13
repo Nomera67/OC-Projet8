@@ -24,18 +24,23 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    &__reset{
+        font-family: 'Yellowtail', sans-serif;
+        font-size: $input-size;
+        background-color: $secondary-text-color;
+        color: $main-text-color;
+        border: 1px solid $secondary-text-color;
+    }
     &__filter{
-        cursor: pointer;
         background-color: transparent;
         color: $secondary-text-color;
         border: 1px solid $secondary-text-color;
-        padding: 5px 10px;
-        min-width: 75px;
-        border-radius: 20px;
         font-size: $regular-size;
-        transition: all .5s ease;
+        &:hover{
+            background-color: $secondary-text-color;
+            color: $main-text-color;
+        }
     }
-
     &__cards{
         width: 100%;
         max-width: 1550px;
@@ -91,6 +96,13 @@
             object-position: center;
         }
     }
+}
+.projects__filter, .projects__reset{
+    cursor: pointer;
+    padding: 5px 10px;
+    min-width: 75px;
+    border-radius: 20px;
+    transition: all .5s ease;
 }
 
 .filter__active{
