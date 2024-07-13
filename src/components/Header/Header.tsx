@@ -39,11 +39,11 @@ function Header() {
         items.forEach((item, index) => {
             const mouseOverListener = () => handleMouseOver(index);
             item.addEventListener('mouseover', mouseOverListener);
-            item.addEventListener('mouseout', () => setActiveIndex(-1)); // Optional: Reset on mouse out
+            item.addEventListener('mouseout', () => setActiveIndex(-1));
 
             return () => {
                 item.removeEventListener('mouseover', mouseOverListener);
-                item.removeEventListener('mouseout', () => setActiveIndex(-1)); // Optional: Reset on mouse out
+                item.removeEventListener('mouseout', () => setActiveIndex(-1));
             };
         });
     }, [isNavVisible]);
